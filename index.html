@@ -5,26 +5,69 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>AMD git flow</title>
+  <link rel="stylesheet" href="./assets/lib/icomoon/icomoon.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <style>
+    #wrapper > div {
+      width: 500vw;
+
+    }
+    .section {
+      float: left;
+      width: 20%;
+    }
+    .section__body figcaption {
+      margin-top: 5%;
+      font-size: .8em;
+    }
+    code {
+      font-family: monospace;
+    }
+    .err {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
   <header class="header" data-scroll-header>
-    
+
   </header>
 
   <div id="wrapper">
     <div>
-      <section class="section" id="">
-       <div class="container">
-          <div class="section-container">
-            <div class="section-header">
-              <h2 class="section-title">Section</h2>
-              <p class="section-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+
+      <!-- PULL -->
+      <section class="section" id="p1">
+        <div class="container">
+          <div class="section__container">
+            <div class="section__header">
+              <h2 class="section__title">AMD Git Flow</h2>
+              <p class="section__lead">この手順書は AMDで Git を使用する場合、参考するために作られた手順書です。<a href="https://github.com/jinma-motoe/githubflow">このページも Github でソースコードが確認できます。</a>何か修正したいところがあればいつでもお願いします。</p>
             </div>
-            <div class="section-body">
-              <ul>
+            <div class="section__body">
+              <figure>
+                <img src="./assets/img/0flow_001.png" alt="">
+                <figcaption>
+                  <small style="float:right;">
+                    <a href="https://leanpub.com/git-flow/read">※ git-flow</a>からの画像
+                  </small>
+                </figcaption>
+              </figure>
+              <ol>
+                <li>PULL</li>
+                <li>BRANCH</li>
+                <li>EDIT</li>
+                <li>COMMIT</li>
+                <li>PULL REQUEST</li>
+                <li>MERGE</li>
+                <li>RELEASE</li>
+              </ol>
+              <ul class="list--inline">
                 <li>
-                  <button class="" data-scroll="#second">
-                    Next
+                  <button class="btn btn--ghost" data-scroll="#p2">
+                    次へ
+                    <i class="icon-angle-right"></i>
                   </button>
                 </li>
               </ul>
@@ -33,18 +76,56 @@
         </div>
       </section>
 
-      <section class="section" id="">
-       <div class="container">
-          <div class="section-container">
-            <div class="section-header">
-              <h2 class="section-title">Section</h2>
-              <p class="section-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+      <!-- BRANCH -->
+      <section class="section" id="p2">
+        <div class="container">
+          <div class="section__container">
+            <div class="section__header">
+              <h2 class="section__title">BRANCH</h2>
+              <p class="section__lead">
+                安全な作業のため、マスターから BRANCH を作り、その BRANCH にコードを書きます。<br>
+                BRANCH 名は作業目的を表すアルベルト表記で入力します。<br>
+                例：about-page-tsukuru, about-page-naosu</code>
+              </p>
             </div>
-            <div class="section-body">
-              <ul>
+            <div class="section__body">
+              <figure>
+                <img src="./assets/img/2branch_000.png" alt="">
+                <figcaption>
+                  <p>
+                    新規ブランチをつくる
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/2branch_000b.png" alt="">
+                <figcaption>
+                  <p>
+                    （Github Desktop 0.5 バージョンの場合、このボタンです。）
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/2branch_001.png" alt="">
+                <figcaption>
+                  <p>
+                    ブランチの名前を決めて <code>Create Branch</code> ボタンをタップ
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/2branch_002.png" alt="">
+                <figcaption>
+                  <p>
+                    現在のブランチが変更されました！
+                  </p>
+                </figcaption>
+              </figure>
+              <ul class="list--inline">
                 <li>
-                  <button class="" data-scroll="#second">
-                    Next
+                  <button class="btn btn--ghost" data-scroll="#p3">
+                    次へ
+                    <i class="icon-angle-right"></i>
                   </button>
                 </li>
               </ul>
@@ -53,18 +134,71 @@
         </div>
       </section>
 
-      <section class="section" id="">
-       <div class="container">
-          <div class="section-container">
-            <div class="section-header">
-              <h2 class="section-title">Section</h2>
-              <p class="section-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+      <!-- EDIT -->
+      <section class="section" id="p3">
+        <div class="container">
+          <div class="section__container">
+            <div class="section__header">
+              <h2 class="section__title">EDIT</h2>
+              <p class="section__lead">
+                自分のブランチで安全にソースコードを作ったり、直したりします。
+              </p>
             </div>
-            <div class="section-body">
-              <ul>
+            <div class="section__body">
+              <figure>
+                <img src="./assets/img/3edit_000.png" alt="">
+                <figcaption>
+                  <p>
+                    まずはファインダーを開いて、
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/3edit_000b00.png" alt="">
+                <figcaption>
+                  <p>
+                    （Github Desktop 0.5 バージョンの場合、ここを右クリック）
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/3edit_000b01.png" alt="">
+                <figcaption>
+                  <p>
+                    （ここを左クリック）
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/3edit_001.png" alt="">
+                <figcaption>
+                  <p>
+                    ファインダーが開きましたので、このフォルダーを使用しているテキストエディターで開きます。
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/3edit_002.png" alt="">
+                <figcaption>
+                  <p>
+                    次はローカルサーバーを立ち上げるため、ターミナルでも開きます。
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/3edit_003.png" alt="">
+                <figcaption>
+                  <p>
+                    ターミナル画面が出たら<code>npm run dev</code> を入力すると自分のブラウザーにテストサーバーが立ち上げます。<br>
+                    コードを書いてファイルを保存する度にテストサーバーに自動で反映されます。直した コードは COMMIT する必要があります。
+                  </p>
+                </figcaption>
+              </figure>
+              <ul class="list--inline">
                 <li>
-                  <button class="" data-scroll="#second">
-                    Next
+                  <button class="btn btn--ghost" data-scroll="#p4">
+                    次へ
+                    <i class="icon-angle-right"></i>
                   </button>
                 </li>
               </ul>
@@ -73,18 +207,47 @@
         </div>
       </section>
 
-      <section class="section" id="">
-       <div class="container">
-          <div class="section-container">
-            <div class="section-header">
-              <h2 class="section-title">Section</h2>
-              <p class="section-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+      <!-- COMMIT -->
+      <section class="section" id="p4">
+        <div class="container">
+          <div class="section__container">
+            <div class="section__header">
+              <h2 class="section__title">COMMIT</h2>
+              <p class="section__lead">
+                どんな作業をしましたか。他の人がわかるように変更したコードの記録を残します。
+              </p>
             </div>
-            <div class="section-body">
-              <ul>
+            <div class="section__body">
+              <figure>
+                <img src="./assets/img/4commit_000.png" alt="">
+                <figcaption>
+                  <p>
+                    タイトルには「HTML TAG 構造」と入れましたが、
+                    少しわかりにくいかもしれませんね。。簡単な内容あれば説明は省略しても良いでしょう。
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/4commit_000b.png" alt="">
+                <figcaption>
+                  <p>
+                    （Github Desktop 0.5 バージョンの場合、このボタンです。）
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/4commit_002b.png" alt="">
+                <figcaption>
+                  <p>
+                    COMMIT することがない場合、「No Uncommitted Changes」が表示されます。
+                  </p>
+                </figcaption>
+              </figure>
+              <ul class="list--inline">
                 <li>
-                  <button class="" data-scroll="#second">
-                    Next
+                  <button class="btn btn--ghost" data-scroll="#p5">
+                    次へ
+                    <i class="icon-angle-right"></i>
                   </button>
                 </li>
               </ul>
@@ -93,18 +256,204 @@
         </div>
       </section>
 
-      <section class="section" id="">
-       <div class="container">
-          <div class="section-container">
-            <div class="section-header">
-              <h2 class="section-title">Section</h2>
-              <p class="section-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+      <!-- PULL REQUEST -->
+      <section class="section" id="p5">
+        <div class="container">
+          <div class="section__container">
+            <div class="section__header">
+              <h2 class="section__title">PULL REQUEST</h2>
+              <p class="section__lead">
+                PULL REQUEST を使って自分のコードレビューをマスターに申請し、問題がなければブランチのコードがマスターに反映されます。<br>
+                PULL REQUEST する場合、18時までに PULL REQUEST してください。
+              </p>
             </div>
-            <div class="section-body">
-              <ul>
+            <div class="section__body">
+              <figure>
+                <img src="./assets/img/5pr_000.png" alt="">
+                <figcaption>
+                  <p>
+                    ブランチに COMMIT した２件を PULL REQUEST してみます。
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/5pr_000a01.png" alt="">
+                <figcaption>
+                  <p>
+                    今のブランチで初めて PULL REQUEST する場合はボタンがこんな感じですが、内容的には同じなので、タップしましょう。
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/5pr_001b.png" alt="">
+                <figcaption>
+                  <p>
+                    （Github Desktop 0.5 バージョンの場合、このボタンです。）
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/5pr_002.png" alt="">
+                <figcaption>
+                  <p>
+                    PULL REQUEST 申請
+                  </p>
+                </figcaption>
+              </figure>
+              <div class="err">
+                <figure>
+                  <img src="./assets/img/5pr_002e01.png" alt="">
+                  <figcaption>
+                    <p>
+                      まずは落ち着いて。。
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img src="./assets/img/5pr_002e02.png" alt="">
+                  <figcaption>
+                    <p>
+                      直します。
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img src="./assets/img/5pr_002e03.png" alt="">
+                  <figcaption>
+                    <p>
+                      GJ
+                    </p>
+                  </figcaption>
+                </figure>
+              </div>
+              <figure>
+                <img src="./assets/img/5pr_003.png" alt="">
+                <figcaption>
+                  <p>
+                    自分のブランチ（コード）と対処（ base:master ）を確認して、<br>
+                    みどりの PULL REQUEST 申請ボタンをタップして申請を始めます。
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/5pr_004.png" alt="">
+                <figcaption>
+                  <p>
+                    変更点などを簡単に書いて PULL REQUEST を申請しましょう。<br>
+                    問題がなければマスター反映されます。
+                  </p>
+                </figcaption>
+              </figure>
+              <ul class="list--inline">
                 <li>
-                  <button class="" data-scroll="#second">
-                    Next
+                  <button class="btn btn--ghost" data-scroll="#p6">
+                    次へ
+                    <i class="icon-angle-right"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MERGE -->
+      <section class="section" id="p6">
+        <div class="container">
+          <div class="section__container">
+            <div class="section__header">
+              <h2 class="section__title">MERGE</h2>
+              <p class="section__lead">
+                こうやって PULL REQUEST されたブランチはマスター側でブランチをに合体させます。
+              </p>
+            </div>
+            <div class="section__body">
+              <figure>
+                <img src="./assets/img/6merge_001.png" alt="">
+                <figcaption>
+                  <p>
+                    問題がない場合、<strong><code>Merge pull request</code> ボタンをタップ</strong>して PULL REQUEST 申請を承認する。
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/6merge_002.png" alt="">
+                <figcaption>
+                  <p>
+                    マスターに合体させました。
+                  </p>
+                </figcaption>
+              </figure>
+              <ul class="list--inline">
+                <li>
+                  <button class="btn btn--ghost" data-scroll="#p7">
+                    次へ
+                    <i class="icon-angle-right"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELEASE -->
+      <section class="section" id="p7">
+        <div class="container">
+          <div class="section__container">
+            <div class="section__header">
+              <h2 class="section__title">RELEASE</h2>
+              <p class="section__lead">
+                ソースコードを FTP サーバーに公開する段階です。
+              </p>
+            </div>
+            <div class="section__body">
+              <figure>
+                <img src="./assets/img/3edit_002.png" alt="">
+                <figcaption>
+                  <p>
+                    またターミナルに戻って、
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/7build_000.png" alt="">
+                <figcaption>
+                  <p>
+                    キーボードの <code>control</code> + <code>C</code> を押してローカルサーバーを停止させる
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/7build_001.png" alt="">
+                <figcaption>
+                  <p>
+                    <code>npm run build</code> を入力してリリース用のコードを作ります。<br>
+                    （１分〜２分ほどかかります。）
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/7build_002.png" alt="">
+                <figcaption>
+                  <p>
+                    すると、<code>dist</code> フォルダー内に<code>index.html</code> と <code>static</code> フォルダーが作られるので、
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/7build_003.png" alt="">
+                <figcaption>
+                  <p>
+                    そのファイルを FTP サーバー にあげる、これでリリース完了です。
+                  </p>
+                </figcaption>
+              </figure>
+              <ul class="list--inline">
+                <li>
+                  <button class="btn btn--ghost" data-scroll="#p1">
+                    はじめに戻る
+                    <i class="icon-loop2"></i>
                   </button>
                 </li>
               </ul>
@@ -115,6 +464,12 @@
       </section>
     </div>
   </div>
-
+  <script src="./assets/lib/sweet-scroll/sweet-scroll.js"></script>
+  <script>
+    var sweetScroll = new SweetScroll({
+      horizontalScroll: true,
+      updateURL: true
+    }, "#wrapper");
+  </script>
 </body>
 </html>
